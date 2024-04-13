@@ -1,0 +1,10 @@
+{
+  "name": "practica-zmq",
+  "version": "1.0.0",
+  "description": "Practicando patrones de comunicación distribuidos con ZeroMQ",
+  "main": "index.js",
+  "author": "los profes",
+  "dependencies": {
+    "zeromq": "^6.0.0-beta.19"
+  }
+}

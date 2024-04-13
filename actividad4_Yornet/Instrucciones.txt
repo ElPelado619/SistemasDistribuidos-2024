@@ -1,0 +1,35 @@
+Guía de Trabajos Prácticos Nº4
+- Alumno: Agustín Yornet de Rosas
+- Legajo: 13921
+
+-------------------------------------------------------
+########## Configuración para Debian/Ubuntu: ##########
+-------------------------------------------------------
+
+	1. Configurar el archivo "config.js" con la ip donde desea hostear el servicio "publisher".
+
+		$ nano config.js
+
+	2. Dentro de la carpeta "pub-sub", cambiar el puerto en la línea de código ```zmq_bind(publisher, "tcp://*:5555");``` con el puerto deseado.
+
+		$ cd ./pub-sub
+		$ nano publisher.c
+
+	3. Compilar el archivo "publisher.c" con la instrucción
+
+		$ cd ./pub-sub
+		$ gcc -o publisher publisher.c -lzmq
+
+--------------------------------
+########## Ejecución: ##########
+--------------------------------
+
+	1. Ejecutar el proceso "publisher" en el lado del servidor con la instrucción:
+
+		$ cd ./pub-sub
+		$ ./publisher
+
+	2. Ejecutar el proceso "subscriber" en el lado del cliente con la instrucción:
+
+		$ cd /pub-sub
+		$ node subscriber.js
